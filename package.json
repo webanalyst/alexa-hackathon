@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Alexa Hackathon - Isla del tesoro",
   "scripts": {
-    "install": "sh ./install.sh",
+    "_install": "sh ./install.sh",
     "init": "ask init",
     "deploy": "ask deploy --force",
     "diff": "ask diff",

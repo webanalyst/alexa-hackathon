@@ -3,6 +3,15 @@ const {
     DynamoDbPersistenceAdapter
 } = require('ask-sdk-dynamodb-persistence-adapter');
 
+const AWS = require("aws-sdk");
+const config = require("../config");
+console.log("AWS.config:");
+console.log(AWS.config);
+AWS.config.update({
+    region: config.dynamo.region
+});
+
+
 // This function establishes the primary key of the database as the skill id (hence you get global persistence, not per user id)
 function keyGenerator(requestEnvelope) {
     if (requestEnvelope &&
@@ -15,8 +24,8 @@ function keyGenerator(requestEnvelope) {
     throw 'Cannot retrieve app id from request envelope!';
 }
 
-persistenceAdapter = new DynamoDbPersistenceAdapter({
-    tableName: 'alexa_seed_attr_table',
+const persistenceAdapter = new DynamoDbPersistenceAdapter({
+    tableName: config.dynamo.tableName,
     createTable: true,
     partitionKeyGenerator: keyGenerator
 });

@@ -1,9 +1,8 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "seed skill",
-            "intents": [
-                {
+            "invocationName": "isla del tesoro",
+            "intents": [{
                     "name": "AMAZON.CancelIntent",
                     "samples": []
                 },

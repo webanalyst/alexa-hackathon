@@ -1,10 +1,11 @@
 {
-  "name": "alexa-skills-seed-for-nodejs",
+  "name": "isla-del-tesoro",
   "version": "1.0.0",
-  "description": "Boilerplate Alexa Skill for NodeJS",
+  "description": "Alexa Hackathon - Isla del tesoro",
   "scripts": {
+    "install": "sh ./install.sh",
     "init": "ask init",
-    "deploy": "cd ./lambda/custom&&npm install&&cd ../..&&ask deploy --force",
+    "deploy": "ask deploy --force",
     "diff": "ask diff",
     "test": "node ./lambda/custom/index.js",
     "dialog": "ask dialog --locale=en-US",

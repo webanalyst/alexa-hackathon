@@ -2,25 +2,8 @@
   "manifest": {
     "publishingInformation": {
       "locales": {
-        "en-US": {
-          "summary": "This is a sample Alexa skill.",
-          "examplePhrases": [
-            "Alexa, open sample skill.",
-            "Alexa, play sample skill."
-          ],
-          "keywords": [
-            "Descriptive_Phrase_1",
-            "Descriptive_Phrase_2",
-            "Descriptive_Phrase_3"
-          ],
-          "name": "alexa-skills-seed",
-          "description": "Sample Full Description",
-          "updatesDescription": "This skill has updates that fix feature bugs.",
-          "smallIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-skills-seed-for-nodejs/master/assets/images/en-US_smallIcon.png",
-          "largeIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-skills-seed-for-nodejs/master/assets/images/en-US_largeIcon.png"
-        },
         "es-ES": {
-          "summary": "This is a sample Alexa skill.",
+          "summary": "",
           "examplePhrases": [
             "Alexa, open sample skill.",
             "Alexa, play sample skill."
@@ -30,20 +13,17 @@
             "Descriptive_Phrase_2",
             "Descriptive_Phrase_3"
           ],
-          "name": "alexa-skills-seed",
+          "name": "Isla del Tesoro",
           "description": "Sample Full Description",
           "updatesDescription": "This skill has updates that fix feature bugs.",
-          "smallIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-skills-seed-for-nodejs/master/assets/images/es-ES_smallIcon.png",
-          "largeIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-skills-seed-for-nodejs/master/assets/images/es-ES_largeIcon.png"
+          "smallIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-hackathon/master/assets/images/es-ES_smallIcon.png",
+          "largeIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-hackathon/master/assets/images/es-ES_largeIcon.png"
         }
       },
       "isAvailableWorldwide": false,
       "testingInstructions": "Sample Testing Instructions.",
       "category": "COMMUNICATION",
-      "distributionCountries": [
-        "US",
-        "ES"
-      ]
+      "distributionCountries": ["ES"]
     },
     "apis": {
       "custom": {
@@ -52,25 +32,11 @@
           "uri": "alexa-skills-seed-default-eu"
         },
         "regions": {
-          "NA": {
-            "endpoint": {
-              "sslCertificateType": "Trusted",
-              "sourceDir": "lambda/custom",
-              "uri": "alexa-skills-seed-default-na"
-            }
-          },
           "EU": {
             "endpoint": {
               "sslCertificateType": "Trusted",
               "sourceDir": "lambda/custom",
               "uri": "alexa-skills-seed-default-eu"
-            }
-          },
-          "FE": {
-            "endpoint": {
-              "sslCertificateType": "Trusted",
-              "sourceDir": "lambda/custom",
-              "uri": "alexa-skills-seed-default-fe"
             }
           }
         }
@@ -83,10 +49,6 @@
       "isExportCompliant": true,
       "containsAds": false,
       "locales": {
-        "en-US": {
-          "privacyPolicyUrl": "http://www.myprivacypolicy.example.com",
-          "termsOfUseUrl": "http://www.termsofuse.example.com"
-        },
         "es-ES": {
           "privacyPolicyUrl": "http://www.myprivacypolicy.example.com",
           "termsOfUseUrl": "http://www.termsofuse.example.com"

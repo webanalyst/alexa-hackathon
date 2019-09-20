@@ -13,10 +13,6 @@ const ErrorHandler = require("./intents/Error");
 // Persistance Adapters
 const persistenceAdapter = require("./adapters/dynamodb");
 
-// Interceptors: Uncomment if needed
-// const RequestInterceptor = require("./interceptors/Request");
-// const ResponseInterceptor = require("./interceptors/Response");
-
 const HelloWorldIntentHandler = {
   canHandle(handlerInput) {
     return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest' &&
@@ -41,8 +37,6 @@ exports.handler = skillBuilder
   .withApiClient(new Alexa.DefaultApiClient())
   .addErrorHandlers(ErrorHandler)
   .addRequestInterceptors(LocalizationInterceptor)
-  .withCustomUserAgent('skill/seed/v1')
+  .withCustomUserAgent('skill/alexa-hackathon/v1')
   .withPersistenceAdapter(persistenceAdapter)
-  //.addRequestInterceptors(RequestInterceptor)
-  //.addResponseInterceptors(ResponseInterceptor)
   .lambda();

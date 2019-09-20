@@ -1,0 +1,71 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.391e5a93-8f85-4fbb-9f09-12625a378ec3",
+      "merge": {},
+      "resources": {
+        "manifest": {
+          "eTag": "9a4e92824037bee3b63d79a364576773"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "6efa7964d1fcf04e24910e1bed2d9505"
+          },
+          "es-ES": {
+            "eTag": "6efa7964d1fcf04e24910e1bed2d9505"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:us-east-1:630598755106:function:alexa-skills-seed-default-eu",
+            "awsRegion": "us-east-1",
+            "codeUri": "lambda/custom",
+            "functionName": "alexa-skills-seed-default-eu",
+            "handler": "index.handler",
+            "revisionId": "30e62bb9-c548-4100-877f-353750192701",
+            "runtime": "nodejs8.10"
+          },
+          {
+            "alexaUsage": [
+              "custom/NA"
+            ],
+            "arn": "arn:aws:lambda:us-east-1:630598755106:function:alexa-skills-seed-default-na",
+            "awsRegion": "us-east-1",
+            "codeUri": "lambda/custom",
+            "functionName": "alexa-skills-seed-default-na",
+            "handler": "index.handler",
+            "revisionId": "461203b4-57fd-47e4-a77d-9ef89e06cc6c",
+            "runtime": "nodejs8.10"
+          },
+          {
+            "alexaUsage": [
+              "custom/EU"
+            ],
+            "arn": "arn:aws:lambda:eu-west-1:630598755106:function:alexa-skills-seed-default-eu",
+            "awsRegion": "eu-west-1",
+            "codeUri": "lambda/custom",
+            "functionName": "alexa-skills-seed-default-eu",
+            "handler": "index.handler",
+            "revisionId": "52697411-e768-48c3-b166-ec66a2ae2475",
+            "runtime": "nodejs8.10"
+          },
+          {
+            "alexaUsage": [
+              "custom/FE"
+            ],
+            "arn": "arn:aws:lambda:us-west-2:630598755106:function:alexa-skills-seed-default-fe",
+            "awsRegion": "us-west-2",
+            "codeUri": "lambda/custom",
+            "functionName": "alexa-skills-seed-default-fe",
+            "handler": "index.handler",
+            "revisionId": "c356695f-2d7e-49bb-b0c2-ac004c7fbf19",
+            "runtime": "nodejs8.10"
+          }
+        ]
+      }
+    }
+  }
+}

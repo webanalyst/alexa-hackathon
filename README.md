@@ -1,6 +1,7 @@
 # alexa-hackathon
 
-Marius Circius
+Marius Circiu
 Joseba Iker Alonso
 Rodrigo Erades
 Eduardo Iglesias
+

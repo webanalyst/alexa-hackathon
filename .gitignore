@@ -1,0 +1,5 @@
+/lambda/custom/node_modules
+/lambda/custom/package-lock.json
+.DS_Store
+package-lock.json
+.ask/config_bkp

@@ -5,23 +5,24 @@
         "es-ES": {
           "summary": "",
           "examplePhrases": [
-            "Alexa, open sample skill.",
-            "Alexa, play sample skill."
+            "Alexa, abre adivina la peli.",
+            "Alexa, juega adivina la peli."
           ],
           "keywords": [
-            "Descriptive_Phrase_1",
-            "Descriptive_Phrase_2",
-            "Descriptive_Phrase_3"
+            "adivina",
+            "peli",
+            "película",
+            "juego"
           ],
           "name": "Adivina la peli",
           "description": "Sample Full Description",
-          "updatesDescription": "This skill has updates that fix feature bugs.",
+          "updatesDescription": "Esta skill tiene actualizaciones que arreglan fallos.",
           "smallIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-hackathon/master/assets/images/es-ES_smallIcon.png",
           "largeIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-hackathon/master/assets/images/es-ES_largeIcon.png"
         }
       },
       "isAvailableWorldwide": false,
-      "testingInstructions": "Sample Testing Instructions.",
+      "testingInstructions": "Para probar dí: Alexa, abre adivina la peli",
       "category": "COMMUNICATION",
       "distributionCountries": [
         "ES"

@@ -51,7 +51,13 @@
       "usesPersonalInfo": false,
       "isChildDirected": false,
       "isExportCompliant": true,
-      "containsAds": false
+      "containsAds": false,
+      "locales": {
+        "es-ES": {
+          "privacyPolicyUrl": "http://www.myprivacypolicy.example.com",
+          "termsOfUseUrl": "http://www.termsofuse.example.com"
+        }
+      }
     },
     "manifestVersion": "1.0"
   }

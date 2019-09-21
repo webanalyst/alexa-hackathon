@@ -11,9 +11,13 @@ const AnalyticsInterceptor = require("./interceptors/analyticsInterceptor");
 const BaseHandlers = require("./intents/base/index");
 const FallbackHandler = require("./intents/Fallback");
 
-
 // Persistance Adapters
 const persistenceAdapter = require("./adapters/dynamodb");
+
+// Custom Intents
+const ChangeNameIntentHandler = require("./intents/custom/ChangeName");
+const ResolverIntentHandler = require("./intents/custom/Resolver");
+
 
 const HelloWorldIntentHandler = {
   canHandle(handlerInput) {
@@ -33,7 +37,8 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 
 exports.handler = skillBuilder
   .addRequestHandlers(
-    HelloWorldIntentHandler,
+    ResolverIntentHandler,
+    ChangeNameIntentHandler,
     ...BaseHandlers,
     FallbackHandler
   )

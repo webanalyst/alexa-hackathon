@@ -84,9 +84,88 @@
                 {
                     "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
+                },
+                {
+                    "name": "ChangeNameIntent",
+                    "slots": [{
+                        "name": "NombreUsuario",
+                        "type": "AMAZON.FirstName"
+                    }],
+                    "samples": [
+                        "{NombreUsuario}",
+                        "Mi nombre es {NombreUsuario}",
+                        "Me llamo {NombreUsuario}",
+                        "Soy {NombreUsuario}",
+                        "Cambia mi nombre",
+                        "Cambiar mi nombre",
+                        "Cambiar mi nombre a {NombreUsuario}"
+                    ]
+                }, {
+                    "name": "ResolverIntent",
+                    "slots": [{
+                        "name": "NombrePelicula",
+                        "type": "AMAZON.Movie"
+                    }],
+                    "samples": [
+                        "{NombrePelicula}",
+                        "La película es {NombrePelicula}",
+                        "Es {NombrePelicula}",
+                        "La peli es {NombrePelicula}"
+                    ]
                 }
             ],
             "types": []
-        }
+        },
+        "dialog": {
+            "intents": [{
+                "name": "ChangeNameIntent",
+                "confirmationRequired": false,
+                "prompts": {},
+                "slots": [{
+                    "name": "NombreUsuario",
+                    "type": "AMAZON.FirstName",
+                    "confirmationRequired": false,
+                    "elicitationRequired": true,
+                    "prompts": {
+                        "elicitation": "Elicit.Slot.Change.Name"
+                    }
+                }]
+            }, {
+                "name": "ResolverIntent",
+                "confirmationRequired": false,
+                "prompts": {},
+                "slots": [{
+                    "name": "NombrePelicula",
+                    "type": "AMAZON.Movie",
+                    "confirmationRequired": false,
+                    "elicitationRequired": true,
+                    "prompts": {
+                        "elicitation": "Elicit.Slot.Resolve.Movie"
+                    }
+                }]
+            }]
+        },
+        "prompts": [{
+            "id": "Elicit.Slot.Change.Name",
+            "variations": [{
+                    "type": "PlainText",
+                    "value": "¿Cuál es tu nombre?"
+                },
+                {
+                    "type": "PlainText",
+                    "value": "¿Cómo te llamas?"
+                },
+                {
+                    "type": "PlainText",
+                    "value": "¿Me dices tu nombre?"
+                }
+            ]
+        }, {
+            "id": "Elicit.Slot.Resolve.Movie",
+            "variations": [{
+                "type": "PlainText",
+                "value": "¿Cuál es la película?"
+            }]
+        }]
     }
 }

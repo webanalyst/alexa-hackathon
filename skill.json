@@ -15,7 +15,7 @@
             "juego"
           ],
           "name": "Adivina la peli",
-          "description": "Sample Full Description",
+          "description": "Descripción de la skill",
           "updatesDescription": "Esta skill tiene actualizaciones que arreglan fallos.",
           "smallIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-hackathon/master/assets/images/es-ES_smallIcon.png",
           "largeIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-hackathon/master/assets/images/es-ES_largeIcon.png"

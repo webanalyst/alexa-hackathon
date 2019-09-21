@@ -3,5 +3,7 @@
 .DS_Store
 package-lock.json
 .ask/config_bkp
+.ask/config.sample
 .ask/config
 .idea/
+asktemp

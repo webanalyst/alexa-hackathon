@@ -3,40 +3,44 @@
     "publishingInformation": {
       "locales": {
         "es-ES": {
-          "summary": "",
+          "summary": "Resumen de lo que hace la skill",
           "examplePhrases": [
-            "Alexa, open sample skill.",
-            "Alexa, play sample skill."
+            "Alexa, abre movie man.",
+            "Alexa, juega movie man."
           ],
           "keywords": [
-            "Descriptive_Phrase_1",
-            "Descriptive_Phrase_2",
-            "Descriptive_Phrase_3"
+            "movie man",
+            "adivina",
+            "peli",
+            "película",
+            "juego"
           ],
-          "name": "Isla del Tesoro",
-          "description": "Sample Full Description",
-          "updatesDescription": "This skill has updates that fix feature bugs.",
+          "name": "Movieman: Adivina la película",
+          "description": "Descripción de la skill",
+          "updatesDescription": "Esta skill tiene actualizaciones que arreglan fallos.",
           "smallIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-hackathon/master/assets/images/es-ES_smallIcon.png",
           "largeIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-hackathon/master/assets/images/es-ES_largeIcon.png"
         }
       },
       "isAvailableWorldwide": false,
-      "testingInstructions": "Sample Testing Instructions.",
-      "category": "COMMUNICATION",
-      "distributionCountries": ["ES"]
+      "testingInstructions": "Para probar dí: Alexa, abre movie man",
+      "category": "GAMES",
+      "distributionCountries": [
+        "ES"
+      ]
     },
     "apis": {
       "custom": {
         "endpoint": {
           "sourceDir": "lambda/custom",
-          "uri": "alexa-skills-seed-default-eu"
+          "uri": "movieman-default"
         },
         "regions": {
           "EU": {
             "endpoint": {
               "sslCertificateType": "Trusted",
               "sourceDir": "lambda/custom",
-              "uri": "alexa-skills-seed-default-eu"
+              "uri": "movieman-eu"
             }
           }
         }

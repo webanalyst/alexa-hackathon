@@ -2,6 +2,7 @@
 /lambda/custom/package-lock.json
 .DS_Store
 package-lock.json
+.ask/
 .ask/config_bkp
 .ask/config.sample
 .ask/config

@@ -31,9 +31,44 @@ const discoverSuccess = res => {
 };
 
 // This success MovieDetails
-const movieDetailsSuccess = res => {
-    return res
+const movieDetailsSuccess = movie => {
+    // console.log(movie);
+    const genero = movie.genres.map(item => item.name);
+    const titulo = movie.title;
+    const resumen = movie.overview;
+    const paisesDeProduccion = movie.production_countries.map(item => item.name);
+    const subtitulo = movie.tagline;
+
+    const split = movie.release_date.split('-');
+
+    const year = {
+        year: split[0],
+        month: split[1],
+        day: split[2]
+    };
+
+    const id = movie.id;
+    return {
+        id,
+        genero,
+        titulo,
+        subtitulo,
+        resumen,
+        paisesDeProduccion,
+        year
+    }
 };
+
+
+// actores de la película
+
+const movieCreditsSuccess = res => {
+    const arr = res.cast;
+    const filterArr = arr.filter(item => item.order < 3)
+    return filterArr.map(item => ({actor:item.name, personaje:item.character}))
+};
+
+
 
 // This error response
 const discoverError = err => {
@@ -56,39 +91,22 @@ const movieDetails = (x) => {
     });
 };
 
-const init = movie => {
-    // console.log(movie);
-    const genero = movie.genres.map(item => item.name);
-    const titulo = movie.title;
-    const resumen = movie.overview;
-    const paisesDeProduccion = movie.production_countries.map(item => item.name);
-    const subtitulo = movie.tagline;
-    const year = {
-        // Devolver Objeto Año mes y dia
-        // retunr movie.release_date
+const movieCredits = (movie) => {
+    const paramsMovie = {
+        "id": movie,
+        "language" : "es-ES",
     };
-    return {
-        genero,
-        titulo,
-        subtitulo,
-        resumen,
-        paisesDeProduccion,
-        year
-    }
+    return new Promise((resolve, reject) => {
+        tmdb.movieCredits(paramsMovie, (error, response) => error ? reject(discoverError(err)) : resolve(movieCreditsSuccess(response)))
+    });
 };
 
 
+const mergeObj = obj => {
+    return {...obj[0], personajes: obj[1] }
+};
+
 // execute
 movieID
-    .then(res => movieDetails(res))
-    .then(response => {
-        // console.log(response);
-        console.log(init(response));
-    });
-
-
-
-
-
-
-
+    .then(res => Promise.all([movieDetails(res),movieCredits(res)]))
+    .then(response => console.log(mergeObj(response)));

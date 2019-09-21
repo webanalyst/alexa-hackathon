@@ -15,98 +15,81 @@
                     "samples": []
                 },
                 {
-                    "name": "AMAZON.MoreIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.NextIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.NoIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.RepeatIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.StartOverIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.YesIntent",
-                    "samples": []
-                },
-                {
                     "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
                 },
                 {
-                    "name": "SimulateFallBackIntent",
+                    "name": "CaptureMovie",
                     "slots": [{
-                            "name": "NombreUsuario",
-                            "type": "AMAZON.FirstName"
-                        },
-                        {
-                            "name": "NombrePelicula",
-                            "type": "AMAZON.SearchQuery"
-                        },
-                        {
-                            "name": "anything",
-                            "type": "AMAZON.SearchQuery"
-                        }
-                    ],
+                        "name": "movie",
+                        "type": "MyMovies",
+                        "samples": [
+                            "es {movie}",
+                            "{movie}"
+                        ]
+                    }],
                     "samples": [
-                        "{anything} z",
-                        "{anything} y",
-                        "{anything} a",
-                        "{anything} b",
-                        "{anything} c",
-                        "{anything} d",
-                        "{anything} e",
-                        "{anything} f",
-                        "{anything} g",
-                        "{anything} h",
-                        "{anything} i",
-                        "{anything} j",
-                        "{anything} k",
-                        "{anything} l",
-                        "{anything} m",
-                        "{anything} n",
-                        "{anything} o",
-                        "{anything} p",
-                        "{anything} q",
-                        "{anything} r",
-                        "{anything} s",
-                        "{anything} t",
-                        "{anything} u",
-                        "{anything} v",
-                        "{anything} w",
-                        "{anything} x",
-                        "ellos",
-                        "ustedes ",
-                        "nosotros",
-                        "tu",
-                        "yo",
-                        "algo",
-                        "lo que sea",
-                        "a {anything}",
-                        "La película es {NombrePelicula}",
-                        "Es {NombrePelicula}",
-                        "La peli es {NombrePelicula}",
-                        "{NombreUsuario}",
-                        "Mi nombre es {NombreUsuario}",
-                        "Me llamo {NombreUsuario}",
-                        "Soy {NombreUsuario}",
-                        "Cambia mi nombre",
-                        "Cambiar mi nombre",
-                        "Cambiar mi nombre a {NombreUsuario}"
+                        "ni idea",
+                        "no lo sé",
+                        "la película",
+                        "película",
+                        "es {movie}",
+                        "la película es {movie}"
                     ]
                 }
             ],
-            "types": []
-        }
-
+            "types": [{
+                "name": "MyMovies",
+                "values": [{
+                        "name": {
+                            "value": "tiburón"
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "rome"
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "perdidos"
+                        }
+                    }
+                ]
+            }]
+        },
+        "dialog": {
+            "intents": [{
+                "name": "CaptureMovie",
+                "confirmationRequired": false,
+                "prompts": {},
+                "slots": [{
+                    "name": "movie",
+                    "type": "MyMovies",
+                    "confirmationRequired": false,
+                    "elicitationRequired": true,
+                    "prompts": {
+                        "elicitation": "Elicit.Slot.612646733173.1193004780720"
+                    },
+                    "validations": [{
+                        "type": "hasEntityResolutionMatch",
+                        "prompt": "Slot.Validation.612646733173.1193004780720.856200375154"
+                    }]
+                }]
+            }],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [{
+                "id": "Elicit.Slot.612646733173.1193004780720",
+                "variations": [{
+                    "type": "PlainText",
+                    "value": "No me has dicho la pelicula"
+                }]
+            },
+            {
+                "id": "Slot.Validation.612646733173.1193004780720.856200375154",
+                "variations": []
+            }
+        ]
     }
 }

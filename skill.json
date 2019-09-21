@@ -13,7 +13,7 @@
             "Descriptive_Phrase_2",
             "Descriptive_Phrase_3"
           ],
-          "name": "Isla del Tesoro",
+          "name": "Adivina la peli",
           "description": "Sample Full Description",
           "updatesDescription": "This skill has updates that fix feature bugs.",
           "smallIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-hackathon/master/assets/images/es-ES_smallIcon.png",
@@ -23,20 +23,22 @@
       "isAvailableWorldwide": false,
       "testingInstructions": "Sample Testing Instructions.",
       "category": "COMMUNICATION",
-      "distributionCountries": ["ES"]
+      "distributionCountries": [
+        "ES"
+      ]
     },
     "apis": {
       "custom": {
         "endpoint": {
           "sourceDir": "lambda/custom",
-          "uri": "isla-del-tesoro-default"
+          "uri": "adivina-peli-default"
         },
         "regions": {
           "EU": {
             "endpoint": {
               "sslCertificateType": "Trusted",
               "sourceDir": "lambda/custom",
-              "uri": "isla-del-tesoro-eu"
+              "uri": "adivina-peli-eu"
             }
           }
         }

@@ -5,13 +5,39 @@
       "merge": {},
       "resources": {
         "manifest": {
-          "eTag": "b5c80efde0a15344e65ec49d8383d660"
+          "eTag": "5b7738158968f0316ac82a42d51f0e2d"
         },
         "interactionModel": {
           "es-ES": {
             "eTag": "2d3548d7dd053f7f7fe3774d2c11687c"
           }
-        }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:us-east-1:630598755106:function:isla-del-tesoro-default",
+            "awsRegion": "us-east-1",
+            "codeUri": "lambda/custom",
+            "functionName": "isla-del-tesoro-default",
+            "handler": "index.handler",
+            "revisionId": "7f2ca96c-259b-41d3-b18f-f2fef643952c",
+            "runtime": "nodejs8.10"
+          },
+          {
+            "alexaUsage": [
+              "custom/EU"
+            ],
+            "arn": "arn:aws:lambda:eu-west-1:630598755106:function:isla-del-tesoro-eu",
+            "awsRegion": "eu-west-1",
+            "codeUri": "lambda/custom",
+            "functionName": "isla-del-tesoro-eu",
+            "handler": "index.handler",
+            "revisionId": "2fcf9a1b-4d24-4929-802e-cba48854d59b",
+            "runtime": "nodejs8.10"
+          }
+        ]
       }
     }
   }

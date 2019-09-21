@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "isla del tesoro",
+            "invocationName": "adivina la peli",
             "intents": [{
                     "name": "AMAZON.CancelIntent",
                     "samples": []

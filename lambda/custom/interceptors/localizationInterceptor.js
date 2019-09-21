@@ -1,15 +1,10 @@
 const i18n = require('i18next');
 const sprintf = require('i18next-sprintf-postprocessor');
 
-const enData = require("../i18n/en");
-const enUSData = require("../i18n/en-US");
-const esData = require("../i18n/es");
 const esESData = require("../i18n/es-ES");
 
 const languageStrings = {
-  'en': enData,
-  'en-US': enUSData,
-  'es': esData,
+  'es': esESData,
   'es-ES': esESData
 };
 

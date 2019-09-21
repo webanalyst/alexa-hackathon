@@ -104,6 +104,12 @@ const movieCredits = (movie) => {
 const mergeObj = obj => ({...obj[0], personajes: obj[1] });
 
 // execute
-movieID
+
+
+
+const movie = () => movieID
     .then(res => Promise.all([movieDetails(res),movieCredits(res)]))
     .then(response => console.log(mergeObj(response)));
+
+
+module.exports = {movie};

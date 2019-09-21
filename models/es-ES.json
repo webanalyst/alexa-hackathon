@@ -15,16 +15,70 @@
                     "samples": []
                 },
                 {
-                    "name": "HelloWorldIntent",
-                    "slots": [],
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StartOverIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "SimulateFallBackIntent",
+                    "slots": [{
+                        "name": "anything",
+                        "type": "AMAZON.SearchQuery"
+                    }],
                     "samples": [
-                        "hello",
-                        "how are you",
-                        "say hi world",
-                        "say hi",
-                        "hi",
-                        "say hello world",
-                        "say hello"
+                        "{anything} z",
+                        "{anything} y",
+                        "{anything} a",
+                        "{anything} b",
+                        "{anything} c",
+                        "{anything} d",
+                        "{anything} e",
+                        "{anything} f",
+                        "{anything} g",
+                        "{anything} h",
+                        "{anything} i",
+                        "{anything} j",
+                        "{anything} k",
+                        "{anything} l",
+                        "{anything} m",
+                        "{anything} n",
+                        "{anything} o",
+                        "{anything} p",
+                        "{anything} q",
+                        "{anything} r",
+                        "{anything} s",
+                        "{anything} t",
+                        "{anything} u",
+                        "{anything} v",
+                        "{anything} w",
+                        "{anything} x",
+                        "ellos",
+                        "ustedes ",
+                        "nosotros",
+                        "tu",
+                        "yo",
+                        "algo",
+                        "lo que sea",
+                        "a {anything}"
                     ]
                 },
                 {

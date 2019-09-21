@@ -5,10 +5,12 @@ const Alexa = require("ask-sdk-core");
 
 // Translation Service
 const LocalizationInterceptor = require("./interceptors/localizationInterceptor");
+const AnalyticsInterceptor = require("./interceptors/analyticsInterceptor");
 
 // Base Intents
 const BaseHandlers = require("./intents/base/index");
-const ErrorHandler = require("./intents/Error");
+const FallbackHandler = require("./intents/Fallback");
+
 
 // Persistance Adapters
 const persistenceAdapter = require("./adapters/dynamodb");
@@ -32,11 +34,12 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder
   .addRequestHandlers(
     HelloWorldIntentHandler,
-    ...BaseHandlers
+    ...BaseHandlers,
+    FallbackHandler
   )
   .withApiClient(new Alexa.DefaultApiClient())
-  .addErrorHandlers(ErrorHandler)
-  .addRequestInterceptors(LocalizationInterceptor)
+  //.addErrorHandlers(ErrorHandler)
+  .addRequestInterceptors(LocalizationInterceptor, AnalyticsInterceptor)
   .withCustomUserAgent('skill/movieman/v1')
   .withPersistenceAdapter(persistenceAdapter)
   .lambda();

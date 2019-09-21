@@ -37,6 +37,6 @@ exports.handler = skillBuilder
   .withApiClient(new Alexa.DefaultApiClient())
   .addErrorHandlers(ErrorHandler)
   .addRequestInterceptors(LocalizationInterceptor)
-  .withCustomUserAgent('skill/alexa-hackathon/v1')
+  .withCustomUserAgent('skill/movieman/v1')
   .withPersistenceAdapter(persistenceAdapter)
   .lambda();

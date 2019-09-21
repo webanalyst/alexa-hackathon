@@ -5,16 +5,17 @@
         "es-ES": {
           "summary": "Resumen de lo que hace la skill",
           "examplePhrases": [
-            "Alexa, abre adivina la peli.",
-            "Alexa, juega adivina la peli."
+            "Alexa, abre movieman.",
+            "Alexa, juega movieman."
           ],
           "keywords": [
+            "movieman",
             "adivina",
             "peli",
             "película",
             "juego"
           ],
-          "name": "Adivina la peli",
+          "name": "Movieman: Adivina la película",
           "description": "Descripción de la skill",
           "updatesDescription": "Esta skill tiene actualizaciones que arreglan fallos.",
           "smallIconUri": "https://raw.githubusercontent.com/webanalyst/alexa-hackathon/master/assets/images/es-ES_smallIcon.png",
@@ -22,7 +23,7 @@
         }
       },
       "isAvailableWorldwide": false,
-      "testingInstructions": "Para probar dí: Alexa, abre adivina la peli",
+      "testingInstructions": "Para probar dí: Alexa, abre movieman",
       "category": "GAMES",
       "distributionCountries": [
         "ES"
@@ -32,14 +33,14 @@
       "custom": {
         "endpoint": {
           "sourceDir": "lambda/custom",
-          "uri": "adivina-peli-default"
+          "uri": "movieman-default"
         },
         "regions": {
           "EU": {
             "endpoint": {
               "sslCertificateType": "Trusted",
               "sourceDir": "lambda/custom",
-              "uri": "adivina-peli-eu"
+              "uri": "movieman-eu"
             }
           }
         }

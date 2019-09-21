@@ -1,7 +1,7 @@
 {
-  "name": "alexa-skills-seed-for-nodejs",
+  "name": "alexa-movieman",
   "version": "1.0.0",
-  "description": "Boilerplate Alexa Skill for NodeJS",
+  "description": "Skill movieman",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -6,13 +6,16 @@ const LaunchRequestHandler = {
       return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
     },
     handle(handlerInput) {
-      const {attributesManager} = handlerInput.attributesManager;
+      const {attributesManager} = handlerInput;
       const requestAttributes = attributesManager.getRequestAttributes();
       const sessionAttributes = attributesManager.getSessionAttributes();
       const speechText = requestAttributes.t('WELCOME_MESSAGE');
+      movie().then( res => {
+          sessionAttributes['movie'] = res;
+          console.log('........................');
+          console.log(sessionAttributes['movie'] )
+        });
 
-      console.log(movie)
-      sessionAttributes['movie'] = '' //respuesta;
 
       return handlerInput.responseBuilder
         .speak(speechText)

@@ -112,4 +112,4 @@ const movie = () => movieID
     .then(response => console.log(mergeObj(response)));
 
 
-module.exports = {movie};
+module.exports = movie;

@@ -29,14 +29,14 @@
       "custom": {
         "endpoint": {
           "sourceDir": "lambda/custom",
-          "uri": "alexa-skills-seed-default-eu"
+          "uri": "isla-del-tesoro-default"
         },
         "regions": {
           "EU": {
             "endpoint": {
               "sslCertificateType": "Trusted",
               "sourceDir": "lambda/custom",
-              "uri": "alexa-skills-seed-default-eu"
+              "uri": "isla-del-tesoro-eu"
             }
           }
         }

@@ -6,11 +6,11 @@ const esEsData = {
         "HELP_MESSAGE": "Puedes decir hola!",
 
         // Stop.js
-        "EXIT_MESSAGE": "¡Adiós!",
+        "EXIT_MESSAGE": "¡Hasta luego MariCarmen!",
 
         // Launch.js
-        "WELCOME_MESSAGE": "Bienvenido, ¿en qué puedo ayudarte?",
-        "WELCOME_MESSAGE_REPROMT": "Bienvenido, ¿en qué puedo ayudarte?",
+        "WELCOME_MESSAGE": "Bienvenido a Movie Man. Vamos a jugar a las películas. Te voy a dar una serie de pistas y tu tienes que adivinar de qué película se trata. Antes de empezar dime tu nombre.",
+        "WELCOME_MESSAGE_REPROMT": "Bienvenido a Movie Man. Vamos a jugar a las películas. Te voy a dar una serie de pistas y tu tienes que adivinar de qué película se trata. Antes de empezar dime tu nombre.",
 
         // Fallout.js
         "FALLBACK_MESSAGE": "Intent no resuelto",
@@ -22,12 +22,12 @@ const esEsData = {
         'CHANGE_REPROMPT': 'La primera pista es: {0}',
 
         // Resolver.js
-        'RESOLVE_OK': 'Enhorabuena! Has adivinado! ¿Quieres comenzar de nuevo?',
-        'RESOLVE_OK_REPROMPT': 'La pista es.... ',
-        'RESOLVE_KO': 'Ohhh, no es esa la película',
+        'RESOLVE_OK': '¡Respuesta...CORRECTA!. Eres todo un cinéfilo. ¿Quieres jugar de nuevo?',
+        'RESOLVE_OK_REPROMPT': 'Aquí tienes una pista.... ',
+        'RESOLVE_KO': 'Respuesta...INCORRECTA!!, OHHHHh....!Seguimos¡',
         'RESOLVE_KP_REPROMPT': 'Reprompt de la pelicula.'
     }
 
-}
+};
 
 module.exports = esEsData;

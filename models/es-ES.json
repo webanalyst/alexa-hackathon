@@ -15,157 +15,81 @@
                     "samples": []
                 },
                 {
-                    "name": "AMAZON.MoreIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.NextIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.NoIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.RepeatIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.StartOverIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.YesIntent",
-                    "samples": []
-                },
-                {
-                    "name": "SimulateFallBackIntent",
-                    "slots": [{
-                        "name": "anything",
-                        "type": "AMAZON.SearchQuery"
-                    }],
-                    "samples": [
-                        "{anything} z",
-                        "{anything} y",
-                        "{anything} a",
-                        "{anything} b",
-                        "{anything} c",
-                        "{anything} d",
-                        "{anything} e",
-                        "{anything} f",
-                        "{anything} g",
-                        "{anything} h",
-                        "{anything} i",
-                        "{anything} j",
-                        "{anything} k",
-                        "{anything} l",
-                        "{anything} m",
-                        "{anything} n",
-                        "{anything} o",
-                        "{anything} p",
-                        "{anything} q",
-                        "{anything} r",
-                        "{anything} s",
-                        "{anything} t",
-                        "{anything} u",
-                        "{anything} v",
-                        "{anything} w",
-                        "{anything} x",
-                        "ellos",
-                        "ustedes ",
-                        "nosotros",
-                        "tu",
-                        "yo",
-                        "algo",
-                        "lo que sea",
-                        "a {anything}"
-                    ]
-                },
-                {
                     "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
                 },
                 {
-                    "name": "ChangeNameIntent",
+                    "name": "CaptureMovie",
                     "slots": [{
-                        "name": "NombreUsuario",
-                        "type": "AMAZON.FirstName"
+                        "name": "movie",
+                        "type": "MyMovies",
+                        "samples": [
+                            "es {movie}",
+                            "{movie}"
+                        ]
                     }],
                     "samples": [
-                        "{NombreUsuario}",
-                        "Mi nombre es {NombreUsuario}",
-                        "Me llamo {NombreUsuario}",
-                        "Soy {NombreUsuario}",
-                        "Cambia mi nombre",
-                        "Cambiar mi nombre",
-                        "Cambiar mi nombre a {NombreUsuario}"
-                    ]
-                }, {
-                    "name": "ResolverIntent",
-                    "slots": [{
-                        "name": "NombrePelicula",
-                        "type": "AMAZON.Movie"
-                    }],
-                    "samples": [
-                        "{NombrePelicula}",
-                        "La película es {NombrePelicula}",
-                        "Es {NombrePelicula}",
-                        "La peli es {NombrePelicula}"
+                        "ni idea",
+                        "no lo sé",
+                        "la película",
+                        "película",
+                        "es {movie}",
+                        "la película es {movie}"
                     ]
                 }
             ],
-            "types": []
+            "types": [{
+                "name": "MyMovies",
+                "values": [{
+                        "name": {
+                            "value": "tiburón"
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "rome"
+                        }
+                    },
+                    {
+                        "name": {
+                            "value": "perdidos"
+                        }
+                    }
+                ]
+            }]
         },
         "dialog": {
             "intents": [{
-                "name": "ChangeNameIntent",
+                "name": "CaptureMovie",
                 "confirmationRequired": false,
                 "prompts": {},
                 "slots": [{
-                    "name": "NombreUsuario",
-                    "type": "AMAZON.FirstName",
+                    "name": "movie",
+                    "type": "MyMovies",
                     "confirmationRequired": false,
                     "elicitationRequired": true,
                     "prompts": {
-                        "elicitation": "Elicit.Slot.Change.Name"
-                    }
+                        "elicitation": "Elicit.Slot.612646733173.1193004780720"
+                    },
+                    "validations": [{
+                        "type": "hasEntityResolutionMatch",
+                        "prompt": "Slot.Validation.612646733173.1193004780720.856200375154"
+                    }]
                 }]
-            }, {
-                "name": "ResolverIntent",
-                "confirmationRequired": false,
-                "prompts": {},
-                "slots": [{
-                    "name": "NombrePelicula",
-                    "type": "AMAZON.Movie",
-                    "confirmationRequired": false,
-                    "elicitationRequired": true,
-                    "prompts": {
-                        "elicitation": "Elicit.Slot.Resolve.Movie"
-                    }
-                }]
-            }]
+            }],
+            "delegationStrategy": "ALWAYS"
         },
         "prompts": [{
-            "id": "Elicit.Slot.Change.Name",
-            "variations": [{
+                "id": "Elicit.Slot.612646733173.1193004780720",
+                "variations": [{
                     "type": "PlainText",
-                    "value": "¿Cuál es tu nombre?"
-                },
-                {
-                    "type": "PlainText",
-                    "value": "¿Cómo te llamas?"
-                },
-                {
-                    "type": "PlainText",
-                    "value": "¿Me dices tu nombre?"
-                }
-            ]
-        }, {
-            "id": "Elicit.Slot.Resolve.Movie",
-            "variations": [{
-                "type": "PlainText",
-                "value": "¿Cuál es la película?"
-            }]
-        }]
+                    "value": "No me has dicho la pelicula"
+                }]
+            },
+            {
+                "id": "Slot.Validation.612646733173.1193004780720.856200375154",
+                "variations": []
+            }
+        ]
     }
 }

@@ -5,8 +5,7 @@ const {
 
 const AWS = require("aws-sdk");
 const config = require("../config");
-console.log("AWS.config:");
-console.log(AWS.config);
+
 AWS.config.update({
     region: config.dynamo.region
 });

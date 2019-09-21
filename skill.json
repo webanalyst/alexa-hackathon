@@ -3,7 +3,7 @@
     "publishingInformation": {
       "locales": {
         "es-ES": {
-          "summary": "",
+          "summary": "Resumen de lo que hace la skill",
           "examplePhrases": [
             "Alexa, abre adivina la peli.",
             "Alexa, juega adivina la peli."
@@ -23,7 +23,7 @@
       },
       "isAvailableWorldwide": false,
       "testingInstructions": "Para probar dí: Alexa, abre adivina la peli",
-      "category": "COMMUNICATION",
+      "category": "GAMES",
       "distributionCountries": [
         "ES"
       ]
@@ -50,13 +50,7 @@
       "usesPersonalInfo": false,
       "isChildDirected": false,
       "isExportCompliant": true,
-      "containsAds": false,
-      "locales": {
-        "es-ES": {
-          "privacyPolicyUrl": "http://www.myprivacypolicy.example.com",
-          "termsOfUseUrl": "http://www.termsofuse.example.com"
-        }
-      }
+      "containsAds": false
     },
     "manifestVersion": "1.0"
   }

@@ -16,5 +16,7 @@
     "i18next": "^17.0.16",
     "i18next-sprintf-postprocessor": "^0.2.2",
     "universal-analytics": "^0.4.20"
+    "i18next-sprintf-postprocessor": "^0.2.2",
+    "moviedb": "^0.2.10"
   }
 }

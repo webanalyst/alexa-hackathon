@@ -61,7 +61,6 @@ const movieDetailsSuccess = movie => {
 
 
 // actores de la película
-
 const movieCreditsSuccess = res => {
     const arr = res.cast;
     const filterArr = arr.filter(item => item.order < 3)
@@ -102,9 +101,7 @@ const movieCredits = (movie) => {
 };
 
 
-const mergeObj = obj => {
-    return {...obj[0], personajes: obj[1] }
-};
+const mergeObj = obj => ({...obj[0], personajes: obj[1] });
 
 // execute
 movieID

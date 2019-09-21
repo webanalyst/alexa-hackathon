@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "movieman",
+            "invocationName": "movie man",
             "intents": [{
                     "name": "AMAZON.CancelIntent",
                     "samples": []

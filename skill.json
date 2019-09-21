@@ -5,11 +5,11 @@
         "es-ES": {
           "summary": "Resumen de lo que hace la skill",
           "examplePhrases": [
-            "Alexa, abre movieman.",
-            "Alexa, juega movieman."
+            "Alexa, abre movie man.",
+            "Alexa, juega movie man."
           ],
           "keywords": [
-            "movieman",
+            "movie man",
             "adivina",
             "peli",
             "película",
@@ -23,7 +23,7 @@
         }
       },
       "isAvailableWorldwide": false,
-      "testingInstructions": "Para probar dí: Alexa, abre movieman",
+      "testingInstructions": "Para probar dí: Alexa, abre movie man",
       "category": "GAMES",
       "distributionCountries": [
         "ES"

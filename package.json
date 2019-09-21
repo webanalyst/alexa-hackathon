@@ -1,7 +1,7 @@
 {
-  "name": "isla-del-tesoro",
+  "name": "alexa-hackathon-movieman",
   "version": "1.0.0",
-  "description": "Alexa Hackathon - Isla del tesoro",
+  "description": "Alexa Hackathon - Movieman: Adivina la película",
   "scripts": {
     "_install": "sh ./install.sh",
     "init": "ask init",
